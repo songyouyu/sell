@@ -23,6 +23,16 @@ server:
 wechat:
   mpAppId: xxxxxxxxxxxxx
   mpAppSecret: xxxxxxxxxxx
+  openAppId: xxxxxxxxxxxx
+  openAppSecret: xxxxxxxxxxxxxxxxxx
+  mchId: xxxxxxxxxx
+  mchKey: xxxxxxxxxxxxxxxxxxxxx
+  # 证书路径
+  keyPath: xxxxxxxxxxxxxxxxxxx
+  # 异步通知地址 ***
+  notifyUrl: xxxxxxxxxxxxxxxxxxxxxxxxx
+  templateId:
+    orderStatus: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 projectUrl:
   wechatMpAuthorize: http://sell.natapp5.cc
