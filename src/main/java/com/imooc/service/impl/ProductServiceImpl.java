@@ -45,7 +45,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public void increaseStock(List<CartDto> cartDtoList) {
         for (CartDto cartDto : cartDtoList) {
             ProductInfo productInfo = repository.findOne(cartDto.getProductId());
@@ -58,7 +58,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public void decreaseStock(List<CartDto> cartDtoList) {
         for (CartDto cartDto : cartDtoList) {
             ProductInfo productInfo = repository.findOne(cartDto.getProductId());

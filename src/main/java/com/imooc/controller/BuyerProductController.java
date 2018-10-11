@@ -43,7 +43,7 @@ public class BuyerProductController {
 //        for (ProductInfo productInfo : productInfoList) {
 //            categoryTypeList.add(productInfo.getCategoryType());
 //        }
-        //精简方法
+        // 精简方法
         List<Integer> categoryTypeList = productInfoList.stream().map(e -> e.getCategoryType()).
                 collect(Collectors.toList());
         List<ProductCategory> productCategoryList =
