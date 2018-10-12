@@ -3,12 +3,16 @@ package com.imooc.vo;
 import lombok.Data;
 import org.hibernate.validator.constraints.NotEmpty;
 
+import java.io.Serializable;
+
 /**
  * 订单
  * Created by songyouyu on 2018/5/25
  */
 @Data
-public class OrderVo {
+public class OrderVo implements Serializable {
+
+    private static final long serialVersionUID = -1755509836228205015L;
 
     /**
      * 买家姓名

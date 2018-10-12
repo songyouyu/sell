@@ -9,6 +9,7 @@ import com.imooc.vo.ProductInfoVo;
 import com.imooc.vo.ProductVo;
 import com.imooc.vo.ResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -32,6 +33,7 @@ public class BuyerProductController {
 
 
     @GetMapping("/list")
+    @Cacheable(cacheNames = "product", key = "123" )
     public ResultVo list() {
 
         //1. 查询所有的上架商品
